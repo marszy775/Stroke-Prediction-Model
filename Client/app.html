@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head style="overflow: visible">
+    <title>Stroke Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body style="overflow: visible">
+    <div class="img"></div>
+
+    <form class="form">
+        <h2>Age</h2>
+        <div class="slidercontainer">
+            <input type="range" min="0" max="100" step="1" value="50" class="slider" id="uiAge">
+            <div id="uiValue" class="value"><h1></h1></div>
+        </div>
+
+        <div class="parent">
+            <div class="child">
+                <h2>Hypertension</h2>
+                <input type="radio" id="radio-hyper-1" name="uiHyper" value="0" />
+                <label for="radio-hyper-1">No</label>
+                <input type="radio" id="radio-hyper-2" name="uiHyper" value="1" />
+                <label for="radio-hyper-2">Yes</label>
+            </div>
+    
+            <div class="child">
+                <h2>Heart Disease</h2>
+                <input type="radio" id="radio-heart-1" name="uiHeart" value="0" />
+                <label for="radio-heart-1">No</label>
+                <input type="radio" id="radio-heart-2" name="uiHeart" value="1" />
+                <label for="radio-heart-2">Yes</label>
+            </div>
+        </div>
+
+        <h2>Average Glucose Level</h2>
+        <input class="area" type="text" id="uiGlucose" class="floatLabel" name="Glucose" value="100">
+
+
+        <div class="parent">
+            <div class="child">
+                <h2>Ever Married</h2>
+                <input type="radio" id="radio-marry-1" name="uiMarry" value="0" />
+                <label for="radio-marry-1">No</label>
+                <input type="radio" id="radio-marry-2" name="uiMarry" value="1" />
+                <label for="radio-marry-2">Yes</label>
+            </div>
+
+            <div class="child">
+                <h2>Children</h2>
+                <input type="radio" id="radio-child-1" name="uiChild" value="0" />
+                <label for="radio-child-1">No</label>
+                <input type="radio" id="radio-child-2" name="uiChild" value="1" />
+                <label for="radio-child-2">Yes</label>
+            </div>
+        </div>
+
+        <button class="submit" onclick="onClickPredictedClass()" type="button">Predict Stroke Posibilty</button>
+        <div id="uiClass" class="result"> <h2></h2></div>
+    </form>
+</body>
+</html>
